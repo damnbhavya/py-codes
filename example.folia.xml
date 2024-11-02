@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FoLiA xmlns="http://ilk.uvt.nl/folia" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="example-doc" version="1.0">
+    <metadata>
+        <title>Sample FoLiA Document</title>
+        <author>Author Name</author>
+        <!-- POS annotation set declaration -->
+        <annotation type="pos" set="http://example.com/pos-set">
+            <desc>Part-of-Speech tagging</desc>
+        </annotation>
+    </metadata>
+    <text xml:id="example-text">
+        <p xml:id="p1">
+            <s xml:id="s1">
+                <w xml:id="w1" class="PROPN" set="http://example.com/pos-set">Natural</w>
+                <w xml:id="w2" class="PROPN" set="http://example.com/pos-set">Language</w>
+                <w xml:id="w3" class="NOUN" set="http://example.com/pos-set">Processing</w>
+                <w xml:id="w4" class="AUX" set="http://example.com/pos-set">is</w>
+                <w xml:id="w5" class="ADJ" set="http://example.com/pos-set">awesome</w>
+                <c xml:id="c1">!</c>
+            </s>
+        </p>
+    </text>
+</FoLiA>

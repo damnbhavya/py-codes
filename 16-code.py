@@ -6,17 +6,14 @@ df_people = pd.read_csv(r'files\people-1000.csv')
 df_people['Date of birth'] = pd.to_datetime(df_people['Date of birth'])
 df_people['Year of birth'] = df_people['Date of birth'].dt.year
 
-# Create a figure with multiple subplots for line plots
 fig, axs = plt.subplots(2, 1, figsize=(8, 6))
 
-# Line plot: Number of People Born per Year
 people_per_year = df_people['Year of birth'].value_counts().sort_index()
 axs[0].plot(people_per_year.index, people_per_year.values, color='blue')
 axs[0].set_title('Line Plot: Number of People Born per Year')
 axs[0].set_xlabel('Year of Birth')
 axs[0].set_ylabel('Number of People')
 
-# Line plot: Number of People Born per Month (example additional line plot)
 df_people['Month of birth'] = df_people['Date of birth'].dt.month
 people_per_month = df_people['Month of birth'].value_counts().sort_index()
 axs[1].plot(people_per_month.index, people_per_month.values, color='red')
